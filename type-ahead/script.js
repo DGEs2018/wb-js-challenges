@@ -3,8 +3,8 @@ const endpoint =
 
 const cities = [];
 
-const trying = fetch(endpoint);
-console.log(trying);
+fetch(endpoint).then((blob) => blob.json()).then((data) => cities.push(data));
+// console.log(trying);
 // fetch(endpoint, function(e){
 //     console.log(e)
 // })
